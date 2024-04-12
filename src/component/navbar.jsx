@@ -1,15 +1,15 @@
-import React from 'react'
-// import Logreg from './component/log_reg';
+import React from 'react';
 
-const Navbar = () => {
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      };
+const Navbar = ({ onSignInClick }) => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-        <div className="App">
+    <div className="App">
       <div className="container position-sticky z-index-sticky top-0">
         <nav className="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-1 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div className="container-fluid px-0">
@@ -94,7 +94,8 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item my-auto ms-3 ms-lg-0">
-                  <a className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" href=" " role="button">
+                  {/* Attach onClick event to call onSignInClick */}
+                  <a className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" href=" " role="button" onClick={onSignInClick}>
                     Sign In
                   </a>{' '}
                   |{' '}
@@ -107,9 +108,8 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
