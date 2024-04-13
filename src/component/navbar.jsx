@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+// import Logreg from '../component/log_reg';
 
-const Navbar = ({ onSignInClick }) => {
+const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -11,7 +13,7 @@ const Navbar = ({ onSignInClick }) => {
   return (
     <div className="App">
       <div className="container position-sticky z-index-sticky top-0">
-        <nav className="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-1 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+        <nav className="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-1 shadow position-absolute my-3 py-2 start-0 end-0 mx-4" >
           <div className="container-fluid px-0">
             <a
               className="navbar-brand font-weight-bolder ms-sm-3"
@@ -39,71 +41,75 @@ const Navbar = ({ onSignInClick }) => {
               </span>
             </button>
             <div className="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+    
               <ul className="navbar-nav text-dark mx-auto" content-space-between>
                 <li className="nav-item">
-                  <a className="nav-link" role="button" href=" " onClick={() => scrollToSection('home')}>
+             
+                <Link className="nav-link" to="/" onClick={() => scrollToSection('hero')}>
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href=" " onClick={() => scrollToSection('about')}>
+                  <Link className="nav-link" to="/about" onClick={() => scrollToSection('about')}>
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle"
-                    href=" "
+                    to="/template"
                     role="button"
                     id="dropdownMenuTemplates"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Templates
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
+                    Resumes
+                  </Link>
+                  <div className="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages" >
                     <div className="d-none d-lg-block">
                       <h6 className="dropdown-header font-weight-bolder d-flex align-items-center px-1">Landing Page</h6>
-                      <a href="./pages/about-us.html" className="dropdown-item border-radius-md">
-                        <span></span>Professionals
-                      </a>
-                      <a href="./pages/contact-us.html" className="dropdown-item border-radius-md">
+                      <button  className="dropdown-item border-radius-md">
+                        <span>Professionals</span>
+                      </button>
+                      <button  className="dropdown-item border-radius-md">
                         <span>Students</span>
-                      </a>
-                      <a href="./pages/author.html" className="dropdown-item border-radius-md">
+                      </button>
+                      <button className="dropdown-item border-radius-md">
                         <span>Fresher</span>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href=" " role="button" onClick={() => scrollToSection('contact_us')}>
+                  <Link className="nav-link" to="/footer" role="button" onClick={() => scrollToSection('contact_us')}>
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <ul className="nav navbar-nav">
                 <li className="nav-item ms-lg-auto">
-                  <a className="nav-link nav-link-icon me-2" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                  <Link className="nav-link nav-link-icon me-2" to="https://github.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-github me-1"></i>
                     <p className="d-inline text-sm z-index-1 font-weight-bolder" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github" role="button">
                       Github
                     </p>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item my-auto ms-3 ms-lg-0">
                   {/* Attach onClick event to call onSignInClick */}
-                  <a className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" href=" " role="button" onClick={onSignInClick}>
+                  <Link className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" to="/login" role="button" onClick={() => scrollToSection('login')} >
                     Sign In
-                  </a>{' '}
+                  </Link>{' '}
                   |{' '}
-                  <a href={" "} className="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" >
+                  <Link className="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" >
                     Sign Up
-                  </a>
+                  </Link>
                 </li>
+
               </ul>
+    
             </div>
           </div>
         </nav>

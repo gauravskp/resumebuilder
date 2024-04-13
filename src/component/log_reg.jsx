@@ -1,84 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react';
+import '../css/material-kit.css'; 
 
-const Logreg = () => {
-    
-    const loginText = document.querySelector(".title-text .login");
-    const loginForm = document.querySelector("form.login");
-    const loginBtn = document.querySelector("label.login");
-    const signupBtn = document.querySelector("label.signup");
-    const signupLink = document.querySelector("form .signup-link a");
-    signupBtn.onclick = (()=>{
-      loginForm.style.marginLeft = "-50%";
-      loginText.style.marginLeft = "-50%";
-    });
-    loginBtn.onclick = (()=>{
-      loginForm.style.marginLeft = "0%";
-      loginText.style.marginLeft = "0%";
-    });
-    signupLink.onclick = (()=>{
-      signupBtn.click();
-      return false;
-    });
+
+const LoginRegistrationToggle = () => {
+  const [isLogin, setIsLogin] = useState(true); 
+
+  const handleToggle = () => {
+    setIsLogin(!isLogin); // Toggle the boolean state to switch forms
+  };
 
   return (
-    <div>
-         <div class="wrapper">
-         <div class="title-text">
-            <div class="title login">
-               Login Form
+    <div className="container my-5" id="login">
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title text-center">{isLogin ? 'Login' : 'Register'}</h2>
+              {isLogin ? (
+                // Login Form
+                <form>
+                  <div className="mb-3">
+                    <label htmlFor="loginEmail" className="form-label">Email address</label>
+                    <input type="email" className="form-control" id="loginEmail" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="loginPassword" className="form-label">Password</label>
+                    <input type="password" className="form-control" id="loginPassword" required />
+                  </div>
+                  <button type="submit" className="btn btn-primary w-100">Login</button>
+                </form>
+              ) : (
+                // Registration Form
+                <form>
+                  <div className="mb-3">
+                    <label htmlFor="registerEmail" className="form-label">Email address</label>
+                    <input type="email" className="form-control" id="registerEmail" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="registerPassword" className="form-label">Password</label>
+                    <input type="password" className="form-control" id="registerPassword" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="registerConfirmPassword" className="form-label">Confirm Password</label>
+                    <input type="password" className="form-control" id="registerConfirmPassword" required />
+                  </div>
+                  <button type="submit" className="btn btn-success w-100">Register</button>
+                </form>
+              )}
+              <div className="text-center mt-3">
+                <button onClick={handleToggle} className="btn btn-link">
+                  {isLogin ? 'Need an account? Register' : 'Already have an account? Login'}
+                </button>
+              </div>
             </div>
-            <div class="title signup">
-               Signup Form
-            </div>
-         </div>
-         <div class="form-container">
-            <div class="slide-controls">
-               <input type="radio" name="slide" id="login" checked />
-               <input type="radio" name="slide" id="signup" />
-               <label for="login" class="slide login">Login</label>
-               <label for="signup" class="slide signup">Signup</label>
-               <div class="slider-tab"></div>
-            </div>
-            <div class="form-inner">
-               <form action="#" class="login">
-                  <div class="field">
-                     <input type="email" placeholder="Email Address" required />
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Password" minlength="8" required />
-                  </div>
-                  <div class="pass-link">
-                     <a href=" " target="blank">Forgot password?</a>
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Login" />
-                  </div>
-                  <div class="signup-link">
-                     Not a member? <a href=" " target="blank">Signup now</a>
-                  </div>
-               </form>
-               <form action="#" class="signup">
-                  <div class="field">
-                     <input type="email" placeholder="Email Address" required />
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Password" minlength="8" required />
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Confirm password" required />
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Signup" />
-                  </div>
-               </form>
-            </div>
-         </div>
+          </div>
+        </div>
       </div>
-    
     </div>
-  )
-}
+  );
+};
 
-export default Logreg
+export default LoginRegistrationToggle;
