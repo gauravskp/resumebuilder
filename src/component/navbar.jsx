@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import Logreg from '../component/log_reg';
 
-const Navbar = () => {
+const Navbar = ({ onLoginClick }) => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -99,11 +99,11 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item my-auto ms-3 ms-lg-0">
                   {/* Attach onClick event to call onSignInClick */}
-                  <Link className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" to="/login" role="button" onClick={() => scrollToSection('login')} >
+                  <Link className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" to="/login" role="button" onClick={onLoginClick} >
                     Sign In
                   </Link>{' '}
                   |{' '}
-                  <Link className="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" >
+                  <Link className="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" to="/login" >
                     Sign Up
                   </Link>
                 </li>

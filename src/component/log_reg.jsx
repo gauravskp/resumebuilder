@@ -1,12 +1,28 @@
 import React, { useState } from 'react';
-import '../css/material-kit.css'; 
-
+import '../css/material-kit.css';
 
 const LoginRegistrationToggle = () => {
-  const [isLogin, setIsLogin] = useState(true); 
+  const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleToggle = () => {
-    setIsLogin(!isLogin); // Toggle the boolean state to switch forms
+    setIsLogin(!isLogin);
+  };
+
+  const handleLoginSubmit = (event) => {
+    event.preventDefault();
+    // Implement login logic here
+  };
+
+  const handleRegisterSubmit = (event) => {
+    event.preventDefault();
+    if (password !== confirmPassword) {
+      // Handle password mismatch scenario
+      return;
+    }
+    // Implement registration logic here
   };
 
   return (
@@ -17,32 +33,65 @@ const LoginRegistrationToggle = () => {
             <div className="card-body">
               <h2 className="card-title text-center">{isLogin ? 'Login' : 'Register'}</h2>
               {isLogin ? (
-                // Login Form
-                <form>
+                <form onSubmit={handleLoginSubmit}>
                   <div className="mb-3">
                     <label htmlFor="loginEmail" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="loginEmail" required />
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="loginEmail"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="loginPassword" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="loginPassword" required />
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="loginPassword"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
                   </div>
                   <button type="submit" className="btn btn-primary w-100">Login</button>
                 </form>
               ) : (
-                // Registration Form
-                <form>
-                  <div className="mb-3">
+                <form onSubmit={handleRegisterSubmit}>
+                  <div className="mb-3" id="register">
                     <label htmlFor="registerEmail" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="registerEmail" required />
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="registerEmail"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="registerPassword" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="registerPassword" required />
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="registerPassword"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="registerConfirmPassword" className="form-label">Confirm Password</label>
-                    <input type="password" className="form-control" id="registerConfirmPassword" required />
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="registerConfirmPassword"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      required
+                    />
                   </div>
                   <button type="submit" className="btn btn-success w-100">Register</button>
                 </form>

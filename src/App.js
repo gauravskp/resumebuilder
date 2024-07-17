@@ -10,6 +10,7 @@ import Template from './component/template';
 import Footer from './component/footer';
 import Logreg from './component/log_reg';
 
+
 // No need to import BrowserRouter, Routes, or Route from react-router-dom
 
 function App() {
@@ -20,9 +21,11 @@ function App() {
     });
   };
 
+ 
   return (
     <div>
       <Navbar scrollToSection={scrollToSection} />
+      <div className='div2'>
       <Hero id="hero" />
       <div className="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6" id="stats">
         <Stats />
@@ -34,11 +37,13 @@ function App() {
         <Template />
       </div>
       <Review id="review" />
-      <Footer id="footer" />
       <Logreg id="login" />
+      <Footer id="footer" />
+      </div>
       {/* ... other sections ... */}
     </div>
   );
 }
+
 
 export default App;

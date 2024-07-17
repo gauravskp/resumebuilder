@@ -1,6 +1,8 @@
 import React from 'react';
 import hero_bg from '../img/hero_bg.jpg';
 import resume_ex from '../img/resume_ex.jpg';
+import { Link } from 'react-router-dom';
+
 
 const Hero = () => {
   return (
@@ -13,7 +15,9 @@ const Hero = () => {
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center mx-auto">
                 <h1 className="text-white pt-8 mt-n5">Create your Resume with ease and professionalism.</h1>
                 <p className="lead text-white mt-3">Free & Open Source Resume Creating Online Platform. <br/> </p>
+                <Link to="./src/component/wizard_form">
                 <button className="btn btn-warning btn-lg mb-3 mb-sm-0">Create Your Resume</button>
+                </Link>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center mx-auto">
                 <img src={resume_ex} className="relative" style={{borderRadius: '10px'}} height="350px" alt="" role="button" />
