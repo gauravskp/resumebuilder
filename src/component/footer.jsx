@@ -23,32 +23,32 @@ const Footer = () => {
             <div>
               <ul className="d-flex flex-row ms-n3 nav justify-content-center">
                 <li className="nav-item">
-                  <a className="nav-link pe-1" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                  <a className="nav-link pe-1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-facebook text-lg opacity-8"></i>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-1" href="https://twitter.com/" target="_blank" rel="noreferrer">
+                  <a className="nav-link pe-1" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-twitter text-lg opacity-8"></i>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-1" href="https://instagram.com/" target="_blank" rel="noreferrer">
+                  <a className="nav-link pe-1" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-instagram text-lg opacity-8"></i>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-1" href="https://dribbble.com/" target="_blank" rel="noreferrer">
+                  <a className="nav-link pe-1" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-dribbble text-lg opacity-8"></i>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-1" href="https://github.com/" target="_blank" rel="noreferrer">
+                  <a className="nav-link pe-1" href="https://github.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-github text-lg opacity-8"></i>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-1" href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+                  <a className="nav-link pe-1" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-youtube text-lg opacity-8"></i>
                   </a>
                 </li>
@@ -61,27 +61,27 @@ const Footer = () => {
               <h6 className="text-sm">Company & Legal</h6>
               <ul className="flex-column ms-n3 nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="#about_us" target="_blank" rel="noreferrer">
+                  <a className="nav-link" href="#about_us" target="_blank" rel="noopener noreferrer">
                     About Us
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contact_us" target="_blank" rel="noreferrer">
+                  <a className="nav-link" href="#contact_us" target="_blank" rel="noopener noreferrer">
                     Contact Us
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#terms-of-service" target="_blank" rel="noreferrer">
+                  <a className="nav-link" href="#terms-of-service" target="_blank" rel="noopener noreferrer">
                     Terms & Conditions
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#privacy-policy" target="_blank" rel="noreferrer">
+                  <a className="nav-link" href="#privacy-policy" target="_blank" rel="noopener noreferrer">
                     Privacy Policy
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#licence" target="_blank" rel="noreferrer">
+                  <a className="nav-link" href="#licence" target="_blank" rel="noopener noreferrer">
                     Licenses (EULA)
                   </a>
                 </li>
@@ -126,7 +126,7 @@ const Footer = () => {
         <div className="col-12">
           <div className="text-center">
             <p className="text-dark my-4 text-sm font-weight-normal">
-              All rights reserved. Copyright © {new Date().getFullYear()} Resume Buider by <a href="https://www.devgaurav.com" target="_blank" rel="noreferrer">developer Gaurav</a>.
+              All rights reserved. Copyright © {new Date().getFullYear()} Resume Builder by <a href="https://www.devgaurav.com" target="_blank" rel="noopener noreferrer">developer Gaurav</a>.
             </p>
           </div>
         </div>

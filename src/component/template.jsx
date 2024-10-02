@@ -1,6 +1,6 @@
 import React from 'react'
 import rex2 from '../img/r_ex2.jpg'
-import waveswhite from '../img/waves-white.svg'
+import pattern_lines from '../img/pattern_lines.jpg'
 import adobe from '../img/adobe_pdf.png'
 import msword from '../img/ms_word.png'
 
@@ -37,7 +37,7 @@ const Template = () => {
 
         <section class="py-sm-7" id="download-soft-ui">
   <div class="bg-gradient-dark position-relative m-3 border-radius-xl overflow-hidden">
-    <img src={waveswhite.svg} alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-2" />
+    <img src={pattern_lines} alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-2" />
     <div class="container py-7 postion-relative z-index-2 position-relative">
       <div class="row">
         <div class="col-md-7 mx-auto text-center">

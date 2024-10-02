@@ -2,10 +2,13 @@ import React from 'react'
 import redesk from '../img/re_desk.jpg';
 import rex2 from '../img/re_ex2.jpg';
 
+
+
 const Aboutus = () => {
   return (
-    <div>
-        
+    <>
+
+
 <section className="my-5 py-5" id="about">
   <div className="container">
     <div className="row align-items-center">
@@ -90,7 +93,7 @@ const Aboutus = () => {
 
 {/*  END Content Presentation Docs  */}
 
-</div>
+</>
   )
 }
 

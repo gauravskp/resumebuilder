@@ -68,7 +68,7 @@ const Navbar = ({ onLoginClick }) => {
                   </Link>
                   <div className="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages" >
                     <div className="d-none d-lg-block">
-                      <h6 className="dropdown-header font-weight-bolder d-flex align-items-center px-1">Landing Page</h6>
+                      <h6 className="dropdown-header font-weight-bolder d-flex align-items-center px-1">Templates</h6>
                       <button  className="dropdown-item border-radius-md">
                         <span>Professionals</span>
                       </button>
@@ -91,7 +91,7 @@ const Navbar = ({ onLoginClick }) => {
               <ul className="nav navbar-nav">
                 <li className="nav-item ms-lg-auto">
                   <Link className="nav-link nav-link-icon me-2" to="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <i className="fa fa-github me-1"></i>
+                    <i className="fab fa-github me-1"></i>
                     <p className="d-inline text-sm z-index-1 font-weight-bolder" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github" role="button">
                       Github
                     </p>
@@ -99,11 +99,11 @@ const Navbar = ({ onLoginClick }) => {
                 </li>
                 <li className="nav-item my-auto ms-3 ms-lg-0">
                   {/* Attach onClick event to call onSignInClick */}
-                  <Link className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" to="/login" role="button" onClick={onLoginClick} >
+                  <Link className="btn btn-sm bg-gradient-warning mb-0 me-1 mt-2 mt-md-0" to="/signin" role="button" onClick={onLoginClick} >
                     Sign In
                   </Link>{' '}
                   |{' '}
-                  <Link className="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" to="/login" >
+                  <Link className="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" to="/signup" >
                     Sign Up
                   </Link>
                 </li>

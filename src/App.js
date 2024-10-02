@@ -8,7 +8,7 @@ import Aboutus from './component/about_us';
 import Review from './component/review';
 import Template from './component/template';
 import Footer from './component/footer';
-import Logreg from './component/log_reg';
+
 
 
 // No need to import BrowserRouter, Routes, or Route from react-router-dom
@@ -27,9 +27,7 @@ function App() {
       <Navbar scrollToSection={scrollToSection} />
       <div className='div2'>
       <Hero id="hero" />
-      <div className="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6" id="stats">
         <Stats />
-      </div>
       <div className="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6" id="about">
         <Aboutus />
       </div>
@@ -37,7 +35,7 @@ function App() {
         <Template />
       </div>
       <Review id="review" />
-      <Logreg id="login" />
+     
       <Footer id="footer" />
       </div>
       {/* ... other sections ... */}

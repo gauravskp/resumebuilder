@@ -1,0 +1,28 @@
+#login {
+    margin-top: 100px; /* Adjust this value to ensure the login form is not overlapped by the navbar */
+  }
+  
+  .login-card {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .login-card-enter {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  
+  .login-card-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .login-card-exit {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .login-card-exit-active {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  

@@ -16,7 +16,8 @@ const Counter = ({ countTo }) => {
 
 const Stats = () => {
   return (
-    <div>
+    <>
+    <div className="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6" id="stats">
       <section className="pt-3 pb-4" id="count-stats">
         <div className="container">
           <div className="row">
@@ -57,6 +58,7 @@ const Stats = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
